@@ -1,4 +1,9 @@
-<h1>Checkout our Reviews!</h1>
-<% @review.each do |review| %>
-  <%= review.content %>
-<% end %>
+<h1>Check out our Reviews!</h1>
+<% @reviews.each do |review| %>
+  <div>
+    <a href="/movies/<%= review.movie_id %>"><strong><%= review.movie.title %></strong></a>
+    <p><%= review.show_stars %></p>
+    <p><a href="/reviews/<%= review.id %>"><%= review.content.truncate(50)%></a></p>
+  </div>
+  </br>
+  <% end %>

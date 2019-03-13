@@ -1,9 +1,3 @@
 <h1>Review for <%= @review.movie.title %></h1><br>
-<% score =  @review.score %>
-<% score.times do %>
-&#9733
-<% end %>
-<% (5 - score).times do %>
-&#9734
-<% end %>
+<%= @review.show_stars %>
 <p><%= @review.content %></p>
