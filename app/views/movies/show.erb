@@ -4,9 +4,7 @@
   <div>
     <p><%= review.show_stars %></p>
     <p><a href="/reviews/<%= review.id %>"> <%= review.content.truncate(50)%></a></p>
-     <form class="" action="" method="post">
-      <input type="hidden" name="movie_id" value="<%= movie.id %>">
-    </form>
+
   </div>
   </br>
 <% end %>
