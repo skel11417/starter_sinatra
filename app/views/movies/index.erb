@@ -1,6 +1,8 @@
 <h1>Check Out Our Movies!</h1>
 
 <% @movies.each do |movie| %>
-  <a href="/movies/<%= movie.id %>"><h3><%= movie.title %></h3></a>
-  
+  <a href="/movies/<%= movie.id %>"><strong><%= movie.title %></strong></a>
+  <%= movie.show_average_stars %> (<%= movie.reviews.count %>) 
+  <br>
+  <br>
 <% end %>

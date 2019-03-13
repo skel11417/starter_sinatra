@@ -1,12 +1,7 @@
 <h1>Hey write something!</h1>
 <form class="" action="/reviews" method="post">
-  <label for="movie">Movie</label>
-  <select name="movie">
-    <% Movie.all.each do |movie| %>
-      <option value= "<%= movie.id %>" ><%= movie.title %>
-      </option>
-    <% end %>
-  </select><br><br>
+  <!-- <label for="movie">Movie</label> -->
+  <h3><%= @movie.title %></h3>
   <label for="content">Your Review:</label><br>
   <textarea type="textarea" name="content" rows="10" columns="30" value=""></textarea><br>
   <input type="radio" name="score" value="1" > 1<br>

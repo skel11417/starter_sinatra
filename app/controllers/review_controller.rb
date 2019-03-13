@@ -8,6 +8,7 @@ class ReviewController < Sinatra::Base
   end
 
   get "/reviews/new" do
+    @movie = Movie.find(params[:movie_id])
     erb :new
   end
 
