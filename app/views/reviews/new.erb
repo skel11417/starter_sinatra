@@ -1,0 +1,18 @@
+<h1>Hey write something!</h1>
+<form class="" action="/reviews" method="post">
+  <label for="movie">Movie</label>
+  <select name="movie">
+    <% Movie.all.each do |movie| %>
+      <option value= "<%= movie.id %>" ><%= movie.title %>
+      </option>
+    <% end %>
+  </select><br><br>
+  <label for="content">Your Review:</label><br>
+  <textarea type="textarea" name="content" rows="10" columns="30" value=""></textarea><br>
+  <input type="radio" name="score" value="1" > 1<br>
+  <input type="radio" name="score" value="2" > 2<br>
+  <input type="radio" name="score" value="3" checked> 3<br>
+  <input type="radio" name="score" value="4" > 4<br>
+  <input type="radio" name="score" value="5" > 5<br>
+  <input type="submit" name="" value="Submit Your Review">
+</form>
